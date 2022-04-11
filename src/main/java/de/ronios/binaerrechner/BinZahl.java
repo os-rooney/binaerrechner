@@ -1,13 +1,16 @@
 package de.ronios.binaerrechner;
 
-public class BinZahl {
-    private String binZahl;
+import org.springframework.stereotype.Service;
 
-    public String getBinZahl() {
-        return binZahl;
+@Service
+public class BinZahl {
+    private String zahlInBin;
+
+    public String getZahlInBin() {
+        return zahlInBin;
     }
 
-    public void setBinZahl(String binZahl) {
-        this.binZahl = binZahl;
+    public void setZahlInBin(String zahlInBin) {
+        this.zahlInBin = zahlInBin;
     }
 }
