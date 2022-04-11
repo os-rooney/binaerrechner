@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <!-- CSS Styles -->
@@ -9,10 +9,11 @@
 <body>
     <div class="container">
         <div class="content">
-            <form th:action="@{/result}" th:object="${binZahl}" method="POST">
+            <form th:action="@{/}" method="POST">
                 <h1>Binärrechner</h1>
                 <label>Binär-Zahl:
-                    <input type="text" th:field="*{zahlInBin}" autofocus>
+                    <input type="text" th:field="${binZahl.zahlInBin}" autofocus>
+                    <p th:if="${#fields.hasErrors('binZahl.zahlInBin')}" th:errors="${binZahl.zahlInBin}"></p>
                 </label>
                 <input type="submit" value="Binärzahl in Dezimalzahl umrechnen">
             </form>
