@@ -13,7 +13,7 @@
                 <h1>Binärrechner</h1>
                 <label>Binär-Zahl:
                     <input type="text" th:field="${binZahl.zahlInBin}" autofocus>
-                    <p th:if="${#fields.hasErrors('binZahl.zahlInBin')}" th:errors="${binZahl.zahlInBin}"></p>
+                    <p class="error" th:if="${#fields.hasErrors('binZahl.zahlInBin')}" th:errors="${binZahl.zahlInBin}"></p>
                 </label>
                 <input type="submit" value="Binärzahl in Dezimalzahl umrechnen">
             </form>
